@@ -371,9 +371,10 @@ statusBuka();setInterval(statusBuka,60000);
 // menu dari aplikasi
 const IKON='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v2M14 2v2M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1"/></svg>';
 let MENU=[],kat='Semua';
-function gambar(){const g=document.getElementById('gridMenu'),L=kat=='Semua'?MENU:MENU.filter(m=>m.kategori==kat);
-  g.innerHTML=L.length?L.map((m,i)=>`<div class="mk kaca" style="animation-delay:${i*40}ms"><div class="ft">${m.img?`<img src="${esc(m.img)}" alt="${esc(m.nama)}" loading="lazy">`:IKON}</div><h3>${esc(m.nama)}</h3><div class="bw"><span class="kt">${esc(m.kategori)}</span><span class="hg">${rp(m.harga)}</span></div></div>`).join(''):'<div class="kosong kaca" style="grid-column:1/-1">Menu belum tersedia.</div>';
-  const ks=['Semua',...new Set(MENU.map(m=>m.kategori))];
+const grup=m=>(m.kategori||'').trim().toLowerCase()=='kopi'?'Kopi':'Non Kopi';
+function gambar(){const g=document.getElementById('gridMenu'),L=kat=='Semua'?MENU:MENU.filter(m=>grup(m)==kat);
+  g.innerHTML=L.length?L.map((m,i)=>`<div class="mk kaca" style="animation-delay:${i*40}ms"><div class="ft">${m.img?`<img src="${esc(m.img)}" alt="${esc(m.nama)}" loading="lazy">`:IKON}</div><h3>${esc(m.nama)}</h3><div class="bw"><span class="kt">${grup(m)}</span><span class="hg">${rp(m.harga)}</span></div></div>`).join(''):'<div class="kosong kaca" style="grid-column:1/-1">Menu belum tersedia.</div>';
+  const ks=['Semua','Kopi','Non Kopi'].filter(k=>k=='Semua'||MENU.some(m=>grup(m)==k));
   document.getElementById('filter').innerHTML=ks.length>2?ks.map(k=>`<button class="${k==kat?'on':''}" data-k="${esc(k)}">${esc(k)}</button>`).join(''):'';
   document.querySelectorAll('#filter button').forEach(b=>b.onclick=()=>{kat=b.dataset.k;gambar()})}
 fetch(SUPABASE_URL+'/rest/v1/rpc/menu_publik',{method:'POST',headers:{apikey:SUPABASE_KEY,'Content-Type':'application/json'},body:'{}'})
