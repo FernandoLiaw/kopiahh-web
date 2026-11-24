@@ -387,6 +387,11 @@ statusBuka();setInterval(statusBuka,60000);
       f.innerHTML='<div class="sukses"><div style="font-size:48px">🧡</div><b>Terima kasih!</b><p style="color:var(--mut);margin:0">Masukanmu sudah kami terima dan akan kami baca.</p></div>'}
     catch(x){b.disabled=false;b.textContent='Kirim masukan';alert('Gagal mengirim. Coba lagi atau hubungi kami lewat WhatsApp.')}};
 })();
+// buka link langsung ke bagian (#masukan, #menu, dll): posisikan ulang setelah isi halaman selesai dimuat
+let sudahGeser=false;addEventListener('wheel',()=>sudahGeser=true,{passive:true});addEventListener('touchmove',()=>sudahGeser=true,{passive:true});
+function keHash(){if(sudahGeser||!location.hash||location.hash=='#')return;let el=null;try{el=document.querySelector(location.hash)}catch(e){}
+  if(el){el.querySelectorAll('.muncul').forEach(x=>x.classList.add('lihat'));el.scrollIntoView({behavior:'instant',block:'start'})}}
+addEventListener('load',()=>{keHash();setTimeout(keHash,400)});
 // menu dari aplikasi
 const IKON='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v2M14 2v2M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1"/></svg>';
 let MENU=[],kat='Semua';
@@ -397,7 +402,7 @@ function gambar(){const g=document.getElementById('gridMenu'),L=kat=='Semua'?MEN
   document.getElementById('filter').innerHTML=ks.length>2?ks.map(k=>`<button class="${k==kat?'on':''}" data-k="${esc(k)}">${esc(k)}</button>`).join(''):'';
   document.querySelectorAll('#filter button').forEach(b=>b.onclick=()=>{kat=b.dataset.k;gambar()})}
 fetch(SUPABASE_URL+'/rest/v1/rpc/menu_publik',{method:'POST',headers:{apikey:SUPABASE_KEY,'Content-Type':'application/json'},body:'{}'})
-  .then(r=>r.ok?r.json():Promise.reject(r.status)).then(d=>{MENU=d||[];gambar()})
+  .then(r=>r.ok?r.json():Promise.reject(r.status)).then(d=>{MENU=d||[];gambar();requestAnimationFrame(keHash);setTimeout(keHash,500)})
   .catch(()=>{document.getElementById('gridMenu').innerHTML='<div class="kosong kaca" style="grid-column:1/-1">Menu sedang dimuat ulang. Lihat menu lengkap di <a style="color:#ff4e0c;font-weight:700" href="https://gofood.co.id/en/tanjung-pinang/restaurant/kopi-ahh-4d7ce6ac-2a93-435f-a7c4-48760e7fda5e" target="_blank" rel="noopener">GoFood</a>.</div>'});
 </script>
 </body>
