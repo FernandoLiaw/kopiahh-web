@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Kopi Ahh · Kopi susu racikan keluarga</title>
+<meta name="description" content="Kopi Ahh: kopi susu & minuman racikan keluarga di Tanjung Pinang. Lihat menu, lokasi cart, jam buka, pesan lewat GoFood, GoSend atau WhatsApp.">
+<meta name="theme-color" content="#0146a2">
+<meta property="og:title" content="Kopi Ahh">
+<meta property="og:description" content="Kopi susu & minuman racikan keluarga. Pesan lewat GoFood, GoSend atau WhatsApp.">
+<meta property="og:image" content="/icon-512.png">
+<link rel="icon" href="/icon-192.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--biru:#0146a2;--biru2:#1b6fd8;--oren:#ff4e0c;--oren2:#c63a05;--krem:#fff7f2;--tx:#14213d;--mut:#5d6884;--ln:rgba(20,33,61,.1);--kaca:rgba(255,255,255,.62)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:var(--tx);background:radial-gradient(50% 35% at 0% 10%,#ffd2bd 0,transparent 70%),radial-gradient(45% 35% at 100% 30%,#bcd4ff 0,transparent 70%),radial-gradient(60% 40% at 40% 100%,#ffe9c7 0,transparent 70%),#f6f7ff;background-attachment:fixed;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+.kaca{background:var(--kaca);-webkit-backdrop-filter:blur(20px) saturate(170%);backdrop-filter:blur(20px) saturate(170%);border:1px solid rgba(255,255,255,.75);box-shadow:0 10px 34px rgba(1,70,162,.09)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 22px;border-radius:14px;font-weight:700;font-size:15px;border:0;cursor:pointer;transition:transform .18s,box-shadow .18s,filter .18s;white-space:nowrap}
+.btn svg{width:19px;height:19px;flex:none}
+.btn-o{background:var(--oren);color:#fff;box-shadow:0 8px 22px rgba(255,78,12,.35)}
+.btn-w{background:#fff;color:var(--biru)}
+.btn-g{background:var(--kaca);color:var(--tx);border:1px solid rgba(255,255,255,.8);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+.btn-wa{background:#1faf54;color:#fff;box-shadow:0 8px 22px rgba(31,175,84,.3)}
+@media (hover:hover){.btn:hover{transform:translateY(-2px);filter:brightness(1.05)}.btn-g:hover,.btn-w:hover{box-shadow:0 8px 22px rgba(255,78,12,.2);color:var(--oren)}}
+
+/* nav */
+nav{position:fixed;top:12px;left:12px;right:12px;z-index:20;border-radius:20px;transition:background .25s,box-shadow .25s}
+nav .wrap{display:flex;align-items:center;gap:14px;height:62px;padding:0 10px 0 12px}
+nav .logo{height:42px;background:#fff;border-radius:12px;padding:4px 8px;box-shadow:0 4px 14px rgba(0,0,0,.12)}
+nav .logo img{height:34px}
+nav .lk{display:flex;gap:4px;margin-left:auto}
+nav .lk a{padding:9px 13px;border-radius:10px;font-weight:600;font-size:14px;color:#fff;opacity:.92;transition:background .18s,color .18s}
+nav .lk a:hover{background:rgba(255,255,255,.18);opacity:1}
+nav .btn{padding:10px 16px;font-size:14px}
+nav.isi{background:rgba(255,255,255,.75);-webkit-backdrop-filter:blur(20px) saturate(170%);backdrop-filter:blur(20px) saturate(170%);box-shadow:0 10px 30px rgba(1,70,162,.12);border:1px solid rgba(255,255,255,.8)}
+nav.isi .lk a{color:var(--tx)}nav.isi .lk a:hover{background:rgba(255,78,12,.1);color:var(--oren)}
+#bgr{display:none;margin-left:auto;width:44px;height:44px;border-radius:12px;border:0;background:rgba(255,255,255,.18);color:#fff;cursor:pointer}
+nav.isi #bgr{background:rgba(1,70,162,.08);color:var(--tx)}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#0146a2 0%,#1b6fd8 60%,#3d8bff 100%);color:#fff;padding:150px 0 110px;border-radius:0 0 40px 40px}
+.hero:before{content:"";position:absolute;inset:auto -10% -40% auto;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle,rgba(255,78,12,.55),transparent 65%)}
+.hero:after{content:"";position:absolute;left:0;right:0;bottom:0;height:6px;background:var(--oren)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.biji{position:absolute;opacity:.16;font-size:28px;animation:apung 7s ease-in-out infinite}
+@keyframes apung{50%{transform:translateY(-14px) rotate(12deg)}}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:99px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);font-size:13px;font-weight:600}
+.chip i{width:8px;height:8px;border-radius:50%;background:#7dffa8;box-shadow:0 0 0 4px rgba(125,255,168,.25)}
+.hero h1{font-size:clamp(36px,5.4vw,62px);line-height:1.05;margin:18px 0 16px;letter-spacing:-1.5px;font-weight:800}
+.hero h1 span{color:#ffb38f}
+.hero p.lead{font-size:18px;opacity:.9;max-width:520px;margin:0 0 28px}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px}
+.hero .vis{position:relative;display:flex;justify-content:center}
+.hero .vis .bulat{width:min(380px,80vw);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 30% 30%,#fff,#ffe9dc);display:flex;align-items:center;justify-content:center;box-shadow:0 30px 80px rgba(0,0,0,.25),inset 0 -10px 30px rgba(255,78,12,.15);animation:apung 6s ease-in-out infinite}
+.hero .vis .bulat img{width:72%}
+.hero .vis .tg{position:absolute;padding:10px 14px;border-radius:14px;background:#fff;color:var(--tx);font-weight:700;font-size:14px;box-shadow:0 12px 30px rgba(0,0,0,.18);display:flex;align-items:center;gap:8px}
+.hero .vis .tg small{display:block;font-weight:500;color:var(--mut);font-size:12px}
+.hero .vis .t1{left:0;top:16%}.hero .vis .t2{right:0;bottom:14%}
+
+/* section */
+section{padding:84px 0}
+.kepala{text-align:center;max-width:640px;margin:0 auto 40px}
+.kepala .kc{color:var(--oren);font-weight:800;font-size:13px;letter-spacing:1.6px;text-transform:uppercase}
+.kepala h2{font-size:clamp(28px,3.6vw,40px);margin:8px 0 10px;letter-spacing:-.8px;line-height:1.15;color:var(--biru)}
+.kepala p{color:var(--mut);margin:0;font-size:16px}
+
+/* menu */
+.filter{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+.filter button{padding:10px 18px;border-radius:99px;border:1px solid rgba(255,255,255,.8);background:var(--kaca);font:inherit;font-weight:700;font-size:14px;color:var(--tx);cursor:pointer;transition:all .18s}
+.filter button.on{background:var(--biru);color:#fff;border-color:var(--biru)}
+.filter button:not(.on):hover{color:var(--oren);border-color:var(--oren)}
+.grid-m{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px}
+.mk{border-radius:22px;padding:12px;transition:transform .2s,box-shadow .2s;animation:muncul .4s ease both}
+@keyframes muncul{from{opacity:0;transform:translateY(12px)}}
+@media (hover:hover){.mk:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(255,78,12,.18);border-color:rgba(255,78,12,.4)}}
+.mk .ft{aspect-ratio:1;border-radius:16px;overflow:hidden;background:linear-gradient(135deg,#ffe7dc,#e1ebfb);display:flex;align-items:center;justify-content:center}
+.mk .ft img{width:100%;height:100%;object-fit:cover}
+.mk .ft svg{width:42%;height:42%;color:var(--oren2);opacity:.6}
+.mk h3{margin:12px 4px 2px;font-size:17px}
+.mk .bw{display:flex;align-items:center;justify-content:space-between;margin:0 4px 4px}
+.mk .kt{font-size:12px;color:var(--mut);font-weight:600}
+.mk .hg{font-weight:800;color:var(--oren);font-size:17px}
+.kosong{text-align:center;color:var(--mut);padding:30px;border-radius:20px}
+.skel{border-radius:22px;height:300px;background:linear-gradient(90deg,rgba(255,255,255,.4),rgba(255,255,255,.8),rgba(255,255,255,.4));background-size:200% 100%;animation:kilau 1.2s linear infinite}
+@keyframes kilau{to{background-position:-200% 0}}
+
+/* lokasi */
+.jam{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:760px;margin:0 auto 26px}
+.jam>div{border-radius:20px;padding:18px 22px;display:flex;align-items:center;gap:14px}
+.jam .ik{width:48px;height:48px;border-radius:14px;background:#ffe7dc;color:var(--oren2);display:flex;align-items:center;justify-content:center;flex:none}
+.jam b{display:block;font-size:20px}.jam span{color:var(--mut);font-size:14px;font-weight:600}
+#statusBuka{display:flex;justify-content:center;margin-bottom:26px}
+#statusBuka span{padding:8px 16px;border-radius:99px;font-weight:700;font-size:14px}
+.grid-l{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.lk-c{border-radius:22px;padding:20px;display:flex;flex-direction:column;gap:10px}
+.lk-c .ik{width:46px;height:46px;border-radius:14px;background:#e1ebfb;color:var(--biru);display:flex;align-items:center;justify-content:center}
+.lk-c h3{margin:4px 0 0;font-size:18px}
+.lk-c p{margin:0;color:var(--mut);font-size:14px}
+.lk-c .seg{margin-top:auto;display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:var(--oren2);background:#ffe7dc;padding:6px 10px;border-radius:10px;width:max-content}
+
+/* pesan */
+.grid-p{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.pc{border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:10px;transition:transform .2s,box-shadow .2s}
+@media (hover:hover){.pc:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(255,78,12,.18)}}
+.pc .ik{width:52px;height:52px;border-radius:16px;display:flex;align-items:center;justify-content:center}
+.pc h3{margin:6px 0 0;font-size:19px}
+.pc p{margin:0;color:var(--mut);font-size:14px;flex:1}
+.pc .btn{margin-top:6px;width:100%}
+.pc.utama{background:linear-gradient(150deg,#ff4e0c,#c63a05);color:#fff;border:0;box-shadow:0 18px 40px rgba(255,78,12,.35)}
+.pc.utama p{color:rgba(255,255,255,.88)}.pc.utama .ik{background:rgba(255,255,255,.2)!important;color:#fff!important}
+.tag-k{display:flex;flex-wrap:wrap;gap:6px}.tag-k span{font-size:12px;font-weight:700;padding:4px 9px;border-radius:8px;background:#e1ebfb;color:var(--biru)}
+
+/* tentang */
+.tentang{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.tentang .kutip{border-radius:28px;padding:36px;position:relative}
+.tentang .kutip:before{content:"“";position:absolute;top:-10px;left:22px;font-size:110px;line-height:1;color:var(--oren);opacity:.25;font-family:Georgia,serif}
+.tentang .kutip p{font-size:18px;margin:0 0 16px;position:relative}
+.tentang .poin{display:grid;gap:14px}
+.tentang .poin>div{border-radius:20px;padding:18px 20px;display:flex;gap:14px;align-items:flex-start}
+.tentang .poin .ik{width:44px;height:44px;border-radius:13px;flex:none;display:flex;align-items:center;justify-content:center}
+.tentang .poin b{display:block;font-size:16px}.tentang .poin span{color:var(--mut);font-size:14px}
+
+/* footer */
+footer{margin-top:40px;background:linear-gradient(135deg,#01326f,#0146a2);color:#fff;border-radius:40px 40px 0 0;padding:60px 0 30px;position:relative}
+footer:before{content:"";position:absolute;top:0;left:0;right:0;height:6px;background:var(--oren);border-radius:40px 40px 0 0}
+.fgrid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:30px}
+footer .flogo{background:#fff;border-radius:14px;padding:6px 10px;display:inline-block}footer .flogo img{height:46px}
+footer h4{margin:0 0 12px;font-size:15px;opacity:.7;text-transform:uppercase;letter-spacing:1px}
+footer a.fl{display:flex;align-items:center;gap:10px;padding:7px 0;opacity:.9;font-weight:600}footer a.fl:hover{opacity:1;color:#ffb38f}
+footer a.fl svg{width:20px;height:20px}
+footer .bawah{margin-top:40px;padding-top:20px;border-top:1px solid rgba(255,255,255,.15);font-size:13px;opacity:.7;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.sos{display:flex;gap:10px;margin-top:16px}
+.sos a{width:44px;height:44px;border-radius:12px;background:rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;transition:background .18s,transform .18s}
+.sos a:hover{background:var(--oren);transform:translateY(-2px)}.sos svg{width:20px;height:20px}
+
+/* tombol WA melayang */
+.wa-f{position:fixed;right:18px;bottom:18px;z-index:19;width:58px;height:58px;border-radius:50%;background:#1faf54;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(31,175,84,.45);transition:transform .2s}
+.wa-f:hover{transform:scale(1.08)}.wa-f svg{width:28px;height:28px}
+
+.muncul{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}.muncul.lihat{opacity:1;transform:none}
+
+@media (max-width:960px){
+  .grid-l,.grid-p{grid-template-columns:1fr 1fr}
+  .fgrid{grid-template-columns:1fr 1fr}.fgrid>div:first-child{grid-column:1/-1}
+}
+@media (max-width:760px){
+  nav .lk,nav .btn-o{display:none}#bgr{display:flex;align-items:center;justify-content:center}
+  nav.buka .lk{display:flex;position:absolute;top:70px;left:0;right:0;flex-direction:column;background:#fff;border-radius:18px;padding:8px;box-shadow:0 18px 40px rgba(0,0,0,.18)}
+  nav.buka .lk a{color:var(--tx);padding:14px}
+  .hero{padding:120px 0 70px;border-radius:0 0 28px 28px}
+  .hero .wrap{grid-template-columns:1fr;text-align:center}
+  .hero p.lead{margin-left:auto;margin-right:auto}.hero .cta{justify-content:center}
+  .hero .vis{order:-1}.hero .vis .bulat{width:min(240px,64vw)}.hero .vis .tg{display:none}
+  section{padding:60px 0}
+  .jam{grid-template-columns:1fr}
+  .grid-m{grid-template-columns:1fr 1fr;gap:12px}.mk{padding:9px;border-radius:18px}.mk h3{font-size:15px}.mk .hg{font-size:15px}
+  .grid-l,.grid-p{grid-template-columns:1fr}
+  .tentang{grid-template-columns:1fr}.tentang .kutip{padding:26px}
+  .fgrid{grid-template-columns:1fr}
+  footer{border-radius:28px 28px 0 0}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.muncul{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<nav id="nav"><div class="wrap">
+  <a href="#" class="logo" aria-label="Kopi Ahh"><img src="/logo.png" alt="Kopi Ahh"></a>
+  <div class="lk" id="lk"><a href="#menu">Menu</a><a href="#lokasi">Lokasi & jam</a><a href="#pesan">Pesan</a><a href="#tentang">Tentang</a><a href="#kontak">Kontak</a></div>
+  <a class="btn btn-o" href="https://gofood.co.id/en/tanjung-pinang/restaurant/kopi-ahh-4d7ce6ac-2a93-435f-a7c4-48760e7fda5e" target="_blank" rel="noopener">Pesan sekarang</a>
+  <button id="bgr" aria-label="Menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+</div></nav>
+
+<header class="hero">
+  <span class="biji" style="left:6%;top:24%">☕</span><span class="biji" style="left:44%;top:16%;animation-delay:1s">🫘</span><span class="biji" style="left:12%;bottom:14%;animation-delay:2s">🫘</span><span class="biji" style="right:38%;bottom:20%;animation-delay:3s">☕</span>
+  <div class="wrap">
+    <div>
+      <span class="chip" id="chipBuka"><i></i>Tanjung Pinang</span>
+      <h1>Kopi susu racikan <span>keluarga</span>, dari hati.</h1>
+      <p class="lead">Kopi Ahh lahir dari keluarga pecinta kopi. Kami racik sendiri rasanya, hasil jalan-jalan icip kopi dari dalam & luar negeri.</p>
+      <div class="cta">
+        <a class="btn btn-o" href="https://gofood.co.id/en/tanjung-pinang/restaurant/kopi-ahh-4d7ce6ac-2a93-435f-a7c4-48760e7fda5e" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m9 12 2 2 4-4"/></svg>Pesan di GoFood</a>
+        <a class="btn btn-w" href="#menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v2M14 2v2M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1"/></svg>Lihat menu</a>
+      </div>
+    </div>
+    <div class="vis">
+      <div class="bulat"><img src="/logo.png" alt=""></div>
+      <div class="tg t1">⭐ <span>Racikan sendiri<small>resep keluarga</small></span></div>
+      <div class="tg t2">🛵 <span>GoFood & GoSend<small>sampai depan rumah</small></span></div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="menu"><div class="wrap">
+  <div class="kepala muncul"><div class="kc">Menu kami</div><h2>Pilih minuman favoritmu</h2><p>Harga & menu selalu terbaru, langsung dari kasir kami.</p></div>
+  <div class="filter" id="filter"></div>
+  <div class="grid-m" id="gridMenu"><div class="skel"></div><div class="skel"></div><div class="skel"></div><div class="skel"></div></div>
+</div></section>
+
+<section id="lokasi" style="padding-top:20px"><div class="wrap">
+  <div class="kepala muncul"><div class="kc">Lokasi & jam buka</div><h2>Temukan cart Kopi Ahh</h2><p>Mampir langsung ke cart terdekat. Alamat lengkap segera kami umumkan.</p></div>
+  <div id="statusBuka"></div>
+  <div class="jam muncul">
+    <div class="kaca"><span class="ik"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><span>Senin – Kamis</span><b>11.00 – 20.00</b></div></div>
+    <div class="kaca"><span class="ik"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><span>Jumat – Minggu</span><b>12.00 – 22.00</b></div></div>
+  </div>
+  <div class="grid-l">
+    <div class="lk-c kaca muncul"><span class="ik"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2 2h3l2.7 12.4a2 2 0 0 0 2 1.6h8.7a2 2 0 0 0 2-1.6L22 6H6"/></svg></span><h3>Cart 1</h3><p>Tanjung Pinang</p><span class="seg">📍 Alamat segera hadir</span></div>
+    <div class="lk-c kaca muncul"><span class="ik"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2 2h3l2.7 12.4a2 2 0 0 0 2 1.6h8.7a2 2 0 0 0 2-1.6L22 6H6"/></svg></span><h3>Cart 2</h3><p>Tanjung Pinang</p><span class="seg">📍 Alamat segera hadir</span></div>
+    <div class="lk-c kaca muncul"><span class="ik"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2 2h3l2.7 12.4a2 2 0 0 0 2 1.6h8.7a2 2 0 0 0 2-1.6L22 6H6"/></svg></span><h3>Cart 3</h3><p>Tanjung Pinang</p><span class="seg">📍 Alamat segera hadir</span></div>
+    <div class="lk-c kaca muncul"><span class="ik"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5 12 3l9 6.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg></span><h3>Toko offline</h3><p>Tanjung Pinang</p><span class="seg">📍 Alamat segera hadir</span></div>
+  </div>
+</div></section>
+
+<section id="pesan" style="padding-top:20px"><div class="wrap">
+  <div class="kepala muncul"><div class="kc">Cara pesan</div><h2>Pesan sesukamu</h2><p>Lewat aplikasi, diantar, ambil sendiri, atau ajak kami kerja sama.</p></div>
+  <div class="grid-p">
+    <div class="pc utama muncul"><span class="ik"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/><path d="M15 6h3l3 7M5.5 17.5 9 9h6l3.5 8.5M9 9 7 5H4"/></svg></span><h3>GoFood</h3><p>Pesan lewat aplikasi Gojek, diantar langsung ke tempatmu.</p><a class="btn btn-w" target="_blank" rel="noopener" href="https://gofood.co.id/en/tanjung-pinang/restaurant/kopi-ahh-4d7ce6ac-2a93-435f-a7c4-48760e7fda5e">Buka GoFood</a></div>
+    <div class="pc kaca muncul"><span class="ik" style="background:#e3f4ea;color:#1f8a4c"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2M15 18H9M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62L18.3 8.38A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg></span><h3>GoSend</h3><p>Chat kami lewat WhatsApp, kami siapkan & kirim lewat GoSend.</p><a class="btn btn-wa" data-wa="Halo Kopi Ahh, saya mau pesan antar lewat GoSend:%0A- " href="#">Pesan via WhatsApp</a></div>
+    <div class="pc kaca muncul"><span class="ik" style="background:#e1ebfb;color:#0146a2"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg></span><h3>Pesan offline</h3><p>Pesan dulu lewat WhatsApp, tinggal ambil di cart tanpa antre.</p><a class="btn btn-wa" data-wa="Halo Kopi Ahh, saya mau pesan untuk diambil di cart:%0A- " href="#">Pesan via WhatsApp</a></div>
+    <div class="pc kaca muncul"><span class="ik" style="background:#ffe7dc;color:#c63a05"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3M3 4h8"/></svg></span><h3>Kerja sama</h3><div class="tag-k"><span>Titip jual</span><span>Event</span><span>Catering</span><span>Lainnya</span></div><p>Butuh kopi untuk acara, kantor, atau mau titip jual? Yuk ngobrol.</p><a class="btn btn-wa" data-wa="Halo Kopi Ahh, saya tertarik kerja sama (titip jual / event / catering). Boleh info lebih lanjut?" href="#">Hubungi kami</a></div>
+  </div>
+</div></section>
+
+<section id="tentang" style="padding-top:20px"><div class="wrap">
+  <div class="kepala muncul"><div class="kc">Tentang kami</div><h2>Cerita di balik Kopi Ahh</h2></div>
+  <div class="tentang">
+    <div class="kutip kaca muncul">
+      <p>Keluarga kami banyak yang suka minum kopi. Kami suka mencoba kopi di mana-mana, dari kedai lokal sampai cafe di luar negeri.</p>
+      <p>Dari situ kami ingin mengembangkan rasa kopi kami sendiri. Ditambah saudara kami yang sudah membuka cafe di Singapura, lahirlah <b style="color:var(--oren)">Kopi Ahh</b>: kopi racikan keluarga untuk Tanjung Pinang.</p>
+    </div>
+    <div class="poin">
+      <div class="kaca muncul"><span class="ik" style="background:#ffe7dc;color:#c63a05">☕</span><div><b>Racikan keluarga</b><span>Setiap menu kami coba & sempurnakan bersama keluarga.</span></div></div>
+      <div class="kaca muncul"><span class="ik" style="background:#e1ebfb;color:#0146a2">🌏</span><div><b>Terinspirasi dari banyak tempat</b><span>Rasa hasil icip kopi dalam & luar negeri.</span></div></div>
+      <div class="kaca muncul"><span class="ik" style="background:#e3f4ea;color:#1f8a4c">🇸🇬</span><div><b>Pengalaman cafe Singapura</b><span>Belajar langsung dari saudara yang sudah punya cafe di Singapura.</span></div></div>
+    </div>
+  </div>
+</div></section>
+</main>
+
+<footer id="kontak"><div class="wrap">
+  <div class="fgrid">
+    <div><span class="flogo"><img src="/logo.png" alt="Kopi Ahh"></span><p style="opacity:.8;max-width:340px;margin:16px 0 0">Kopi susu & minuman racikan keluarga di Tanjung Pinang.</p>
+      <div class="sos">
+        <a href="https://www.instagram.com/kopiahh.official/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg></a>
+        <a href="https://www.tiktok.com/@kopiahh.id" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.8A4.3 4.3 0 0 1 15.5 3h-3.1v12.4a2.6 2.6 0 1 1-2.6-2.6c.3 0 .5 0 .8.1V9.8a5.7 5.7 0 1 0 4.9 5.6V9.1a7.4 7.4 0 0 0 4.3 1.4V7.4a4.3 4.3 0 0 1-3.2-1.6z"/></svg></a>
+        <a href="#" data-wa="Halo Kopi Ahh" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1l-.9 1.1c-.2.2-.3.2-.6.1a7.3 7.3 0 0 1-3.6-3.2c-.3-.5.3-.4.8-1.4.1-.2 0-.3 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 1.8.8 2.5.8 3.4.7.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4a9.8 9.8 0 1 1 8.3 4.6zm0-21.6A11.8 11.8 0 0 0 1.9 18l-1.7 6 6.2-1.6A11.8 11.8 0 1 0 12 .2z"/></svg></a>
+      </div></div>
+    <div><h4>Pesan</h4>
+      <a class="fl" target="_blank" rel="noopener" href="https://gofood.co.id/en/tanjung-pinang/restaurant/kopi-ahh-4d7ce6ac-2a93-435f-a7c4-48760e7fda5e">🛵 GoFood</a>
+      <a class="fl" href="#" data-wa="Halo Kopi Ahh, saya mau pesan antar lewat GoSend:%0A- ">📦 GoSend (WhatsApp)</a>
+      <a class="fl" href="#" data-wa="Halo Kopi Ahh, saya mau pesan untuk diambil di cart:%0A- ">🛍️ Pesan offline</a>
+      <a class="fl" href="#" data-wa="Halo Kopi Ahh, saya tertarik kerja sama (titip jual / event / catering). Boleh info lebih lanjut?">🤝 Kerja sama</a></div>
+    <div><h4>Kontak & jam</h4>
+      <a class="fl" href="#" data-wa="Halo Kopi Ahh">💬 WhatsApp 0813-679-6797</a>
+      <a class="fl" target="_blank" rel="noopener" href="https://www.instagram.com/kopiahh.official/">📸 @kopiahh.official</a>
+      <a class="fl" target="_blank" rel="noopener" href="https://www.tiktok.com/@kopiahh.id">🎵 @kopiahh.id</a>
+      <p style="opacity:.85;margin:10px 0 0;font-size:14px">Sen–Kam 11.00–20.00<br>Jum–Min 12.00–22.00</p></div>
+  </div>
+  <div class="bawah"><span>© <span id="thn"></span> Kopi Ahh · Hak cipta dilindungi</span><span>Tanjung Pinang, Kepulauan Riau</span></div>
+</div></footer>
+
+<a class="wa-f" href="#" data-wa="Halo Kopi Ahh" aria-label="Chat WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1l-.9 1.1c-.2.2-.3.2-.6.1a7.3 7.3 0 0 1-3.6-3.2c-.3-.5.3-.4.8-1.4.1-.2 0-.3 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 1.8.8 2.5.8 3.4.7.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4a9.8 9.8 0 1 1 8.3 4.6zm0-21.6A11.8 11.8 0 0 0 1.9 18l-1.7 6 6.2-1.6A11.8 11.8 0 1 0 12 .2z"/></svg></a>
+
+<script>
+const WA='628136796797';
+const SUPABASE_URL='https://zodjewihjwiivugaglbd.supabase.co',SUPABASE_KEY='sb_publishable_Lbf-dloUS4RVbnPVfIwoSA_VBLJyugU';
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const rp=n=>'Rp'+(n||0).toLocaleString('id-ID');
+document.getElementById('thn').textContent=new Date().getFullYear();
+// tautan WhatsApp
+document.querySelectorAll('[data-wa]').forEach(a=>{a.href='https://wa.me/'+WA+'?text='+a.dataset.wa.replace(/ /g,'%20');a.target='_blank';a.rel='noopener'});
+// nav
+const nav=document.getElementById('nav');const cek=()=>nav.classList.toggle('isi',scrollY>40);addEventListener('scroll',cek,{passive:true});cek();
+document.getElementById('bgr').onclick=()=>{nav.classList.toggle('buka');nav.classList.add('isi')};
+document.querySelectorAll('#lk a').forEach(a=>a.onclick=()=>nav.classList.remove('buka'));
+// animasi muncul
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('lihat');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.muncul').forEach(el=>io.observe(el));
+// status buka (WIB)
+function statusBuka(){const n=new Date(Date.now()+(new Date().getTimezoneOffset()+420)*6e4),h=n.getDay(),m=n.getHours()*60+n.getMinutes();
+  const jam=d=>d>=1&&d<=4?[660,1200]:[720,1320],[b,t]=jam(h),buka=m>=b&&m<t,f=x=>String(Math.floor(x/60)).padStart(2,'0')+'.'+String(x%60).padStart(2,'0');
+  const lagi=m<b?'jam '+f(b):'besok jam '+f(jam((h+1)%7)[0]);
+  document.getElementById('statusBuka').innerHTML=buka?`<span style="background:#e3f4ea;color:#1f8a4c">🟢 Sedang buka · tutup jam ${f(t)}</span>`:`<span style="background:#ffe7dc;color:#c63a05">🔴 Sedang tutup · buka ${lagi}</span>`;
+  document.getElementById('chipBuka').innerHTML=`<i style="${buka?'':'background:#ffb38f;box-shadow:0 0 0 4px rgba(255,179,143,.25)'}"></i>${buka?'Sedang buka':'Sedang tutup'} · Tanjung Pinang`}
+statusBuka();setInterval(statusBuka,60000);
+// menu dari aplikasi
+const IKON='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v2M14 2v2M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1"/></svg>';
+let MENU=[],kat='Semua';
+function gambar(){const g=document.getElementById('gridMenu'),L=kat=='Semua'?MENU:MENU.filter(m=>m.kategori==kat);
+  g.innerHTML=L.length?L.map((m,i)=>`<div class="mk kaca" style="animation-delay:${i*40}ms"><div class="ft">${m.img?`<img src="${esc(m.img)}" alt="${esc(m.nama)}" loading="lazy">`:IKON}</div><h3>${esc(m.nama)}</h3><div class="bw"><span class="kt">${esc(m.kategori)}</span><span class="hg">${rp(m.harga)}</span></div></div>`).join(''):'<div class="kosong kaca" style="grid-column:1/-1">Menu belum tersedia.</div>';
+  const ks=['Semua',...new Set(MENU.map(m=>m.kategori))];
+  document.getElementById('filter').innerHTML=ks.length>2?ks.map(k=>`<button class="${k==kat?'on':''}" data-k="${esc(k)}">${esc(k)}</button>`).join(''):'';
+  document.querySelectorAll('#filter button').forEach(b=>b.onclick=()=>{kat=b.dataset.k;gambar()})}
+fetch(SUPABASE_URL+'/rest/v1/rpc/menu_publik',{method:'POST',headers:{apikey:SUPABASE_KEY,'Content-Type':'application/json'},body:'{}'})
+  .then(r=>r.ok?r.json():Promise.reject(r.status)).then(d=>{MENU=d||[];gambar()})
+  .catch(()=>{document.getElementById('gridMenu').innerHTML='<div class="kosong kaca" style="grid-column:1/-1">Menu sedang dimuat ulang. Lihat menu lengkap di <a style="color:#ff4e0c;font-weight:700" href="https://gofood.co.id/en/tanjung-pinang/restaurant/kopi-ahh-4d7ce6ac-2a93-435f-a7c4-48760e7fda5e" target="_blank" rel="noopener">GoFood</a>.</div>'});
+</script>
+</body>
+</html>
