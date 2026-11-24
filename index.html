@@ -117,6 +117,26 @@ section{padding:84px 0}
 .pc.utama p{color:rgba(255,255,255,.88)}.pc.utama .ik{background:rgba(255,255,255,.2)!important;color:#fff!important}
 .tag-k{display:flex;flex-wrap:wrap;gap:6px}.tag-k span{font-size:12px;font-weight:700;padding:4px 9px;border-radius:8px;background:#e1ebfb;color:var(--biru)}
 
+
+/* masukan */
+.fm{max-width:720px;margin:0 auto;border-radius:28px;padding:28px}
+.fm .jenis{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px}
+.fm .jenis button{padding:16px;border-radius:16px;border:2px solid rgba(20,33,61,.08);background:rgba(255,255,255,.7);font:inherit;font-weight:700;font-size:15px;color:var(--tx);cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:4px;transition:all .18s}
+.fm .jenis button small{font-weight:500;color:var(--mut);font-size:12px}
+.fm .jenis button.on{border-color:var(--oren);background:#fff3ec;color:var(--oren2)}
+.fm label{display:block;margin-bottom:14px}.fm label>span{display:block;font-weight:700;font-size:14px;margin-bottom:6px}
+.fm label>span i{font-style:normal;font-weight:500;color:var(--mut)}
+.fm input,.fm select,.fm textarea{width:100%;padding:13px 14px;border-radius:12px;border:1px solid rgba(20,33,61,.12);background:rgba(255,255,255,.85);font:inherit;font-size:15px;color:var(--tx);transition:border-color .18s,box-shadow .18s}
+.fm input:focus,.fm select:focus,.fm textarea:focus{outline:0;border-color:var(--oren);box-shadow:0 0 0 3px rgba(255,78,12,.15)}
+.fm textarea{resize:vertical;min-height:110px}
+.fm .dua{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.bintang{display:flex;gap:6px}.bintang button{font-size:34px;line-height:1;background:none;border:0;cursor:pointer;color:#d9dce5;padding:0 2px;transition:transform .15s,color .15s}
+.bintang button.on{color:#f5a524}.bintang button:hover{transform:scale(1.15)}
+.fm .btn{width:100%;margin-top:6px}
+.fm .info{font-size:13px;color:var(--mut);text-align:center;margin:12px 0 0}
+.fm .sukses{text-align:center;padding:30px 10px}.fm .sukses b{display:block;font-size:22px;margin:10px 0 6px}
+.hp{position:absolute;left:-9999px}
+@media (max-width:760px){.fm{padding:20px}.fm .dua{grid-template-columns:1fr}}
 /* tentang */
 .tentang{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
 .tentang .kutip{border-radius:28px;padding:36px;position:relative}
@@ -173,7 +193,7 @@ footer .bawah{margin-top:40px;padding-top:20px;border-top:1px solid rgba(255,255
 
 <nav id="nav"><div class="wrap">
   <a href="#" class="logo" aria-label="Kopi Ahh"><img src="/logo.png" alt="Kopi Ahh"></a>
-  <div class="lk" id="lk"><a href="#menu">Menu</a><a href="#lokasi">Lokasi & jam</a><a href="#pesan">Pesan</a><a href="#tentang">Tentang</a><a href="#kontak">Kontak</a></div>
+  <div class="lk" id="lk"><a href="#menu">Menu</a><a href="#lokasi">Lokasi & jam</a><a href="#pesan">Pesan</a><a href="#masukan">Masukan</a><a href="#tentang">Tentang</a><a href="#kontak">Kontak</a></div>
   <a class="btn btn-o" href="https://gofood.co.id/en/tanjung-pinang/restaurant/kopi-ahh-4d7ce6ac-2a93-435f-a7c4-48760e7fda5e" target="_blank" rel="noopener">Pesan sekarang</a>
   <button id="bgr" aria-label="Menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
 </div></nav>
@@ -230,6 +250,27 @@ footer .bawah{margin-top:40px;padding-top:20px;border-top:1px solid rgba(255,255
   </div>
 </div></section>
 
+
+<section id="masukan" style="padding-top:20px"><div class="wrap">
+  <div class="kepala muncul"><div class="kc">Masukan</div><h2>Ceritakan pengalamanmu</h2><p>Kritik, saran, atau pujian untuk kopi dan karyawan kami. Masukanmu langsung kami baca.</p></div>
+  <form class="fm kaca muncul" id="fm" novalidate>
+    <div class="jenis"><button type="button" data-j="kopi" class="on">☕ Feedback kopi<small>Rasa, menu, harga</small></button><button type="button" data-j="karyawan">👤 Laporan karyawan<small>Pelayanan di cart</small></button></div>
+    <div id="fRating"><label><span>Seberapa suka kamu dengan kopi kami?</span><div class="bintang" id="bintang"></div></label></div>
+    <div class="dua">
+      <label><span>Lokasi <i>(opsional)</i></span><select id="fLok"><option value="">Pilih lokasi</option><option>Cart 1</option><option>Cart 2</option><option>Cart 3</option><option>Toko offline</option><option>GoFood / GoSend</option></select></label>
+      <label><span>Tanggal datang <i>(opsional)</i></span><input type="date" id="fTgl"></label>
+    </div>
+    <label id="fKar" hidden><span>Nama karyawan <i>(opsional, kalau tahu)</i></span><input id="fKarN" maxlength="60" placeholder="contoh: yang jaga sore"></label>
+    <label><span id="fPesanL">Masukanmu</span><textarea id="fPesan" maxlength="1000" placeholder="Tulis di sini…"></textarea></label>
+    <div class="dua">
+      <label><span>Nama <i>(opsional)</i></span><input id="fNama" maxlength="60" placeholder="Boleh dikosongkan"></label>
+      <label><span>No. WhatsApp <i>(opsional)</i></span><input id="fKontak" maxlength="60" inputmode="tel" placeholder="Kalau mau kami balas"></label>
+    </div>
+    <input class="hp" id="fHp" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <button class="btn btn-o" id="fKirim" type="submit">Kirim masukan</button>
+    <p class="info">Masukan hanya dibaca oleh pemilik Kopi Ahh.</p>
+  </form>
+</div></section>
 <section id="tentang" style="padding-top:20px"><div class="wrap">
   <div class="kepala muncul"><div class="kc">Tentang kami</div><h2>Cerita di balik Kopi Ahh</h2></div>
   <div class="tentang">
@@ -257,7 +298,7 @@ footer .bawah{margin-top:40px;padding-top:20px;border-top:1px solid rgba(255,255
       <a class="fl" target="_blank" rel="noopener" href="https://gofood.co.id/en/tanjung-pinang/restaurant/kopi-ahh-4d7ce6ac-2a93-435f-a7c4-48760e7fda5e">🛵 GoFood</a>
       <a class="fl" href="#" data-wa="Halo Kopi Ahh, saya mau pesan antar lewat GoSend:%0A- ">📦 GoSend (WhatsApp)</a>
       <a class="fl" href="#" data-wa="Halo Kopi Ahh, saya mau pesan untuk diambil di cart:%0A- ">🛍️ Pesan offline</a>
-      <a class="fl" href="#" data-wa="Halo Kopi Ahh, saya tertarik kerja sama (titip jual / event / catering). Boleh info lebih lanjut?">🤝 Kerja sama</a></div>
+      <a class="fl" href="#" data-wa="Halo Kopi Ahh, saya tertarik kerja sama (titip jual / event / catering). Boleh info lebih lanjut?">🤝 Kerja sama</a><a class="fl" href="#masukan">💬 Kirim masukan</a></div>
     <div><h4>Kontak & jam</h4>
       <a class="fl" href="#" data-wa="Halo Kopi Ahh">💬 WhatsApp 0813-679-6797</a>
       <a class="fl" target="_blank" rel="noopener" href="https://www.instagram.com/kopiahh.official/">📸 @kopiahh.official</a>
@@ -291,6 +332,27 @@ function statusBuka(){const n=new Date(Date.now()+(new Date().getTimezoneOffset(
   document.getElementById('statusBuka').innerHTML=buka?`<span style="background:#e3f4ea;color:#1f8a4c">🟢 Sedang buka · tutup jam ${f(t)}</span>`:`<span style="background:#ffe7dc;color:#c63a05">🔴 Sedang tutup · buka ${lagi}</span>`;
   document.getElementById('chipBuka').innerHTML=`<i style="${buka?'':'background:#ffb38f;box-shadow:0 0 0 4px rgba(255,179,143,.25)'}"></i>${buka?'Sedang buka':'Sedang tutup'} · Tanjung Pinang`}
 statusBuka();setInterval(statusBuka,60000);
+
+// form masukan
+(()=>{const f=document.getElementById('fm');if(!f)return;let jenis='kopi',rating=0;
+  const bt=document.getElementById('bintang');bt.innerHTML=[1,2,3,4,5].map(n=>`<button type="button" data-n="${n}" aria-label="${n} bintang">★</button>`).join('');
+  const gb=()=>bt.querySelectorAll('button').forEach(b=>b.classList.toggle('on',+b.dataset.n<=rating));
+  bt.onclick=e=>{const b=e.target.closest('button');if(b){rating=+b.dataset.n;gb()}};
+  f.querySelectorAll('[data-j]').forEach(b=>b.onclick=()=>{jenis=b.dataset.j;f.querySelectorAll('[data-j]').forEach(x=>x.classList.toggle('on',x==b));
+    document.getElementById('fRating').hidden=jenis!='kopi';document.getElementById('fKar').hidden=jenis!='karyawan';
+    document.getElementById('fPesanL').textContent=jenis=='kopi'?'Masukanmu':'Ceritakan kejadiannya';
+    document.getElementById('fPesan').placeholder=jenis=='kopi'?'Contoh: kopi susunya enak, tapi kurang dingin…':'Contoh: karyawan ramah / kurang sopan, pesanan lama, dll.'});
+  const v=id=>document.getElementById(id).value.trim();
+  f.onsubmit=async e=>{e.preventDefault();if(v('fHp'))return;const pesan=v('fPesan');
+    if(jenis=='kopi'&&!rating)return alert('Pilih bintang dulu ya (1–5).');
+    if(pesan.length<3)return alert('Tulis masukanmu dulu ya.');
+    const b=document.getElementById('fKirim');b.disabled=true;b.textContent='Mengirim…';
+    const row={jenis,rating:jenis=='kopi'?rating:null,lokasi:v('fLok')||null,karyawan:jenis=='karyawan'?(v('fKarN')||null):null,tgl_kunjungan:v('fTgl')||null,pesan,nama:v('fNama')||null,kontak:v('fKontak')||null};
+    try{const r=await fetch(SUPABASE_URL+'/rest/v1/masukan',{method:'POST',headers:{apikey:SUPABASE_KEY,'Content-Type':'application/json',Prefer:'return=minimal'},body:JSON.stringify(row)});
+      if(!r.ok)throw 0;
+      f.innerHTML='<div class="sukses"><div style="font-size:48px">🧡</div><b>Terima kasih!</b><p style="color:var(--mut);margin:0">Masukanmu sudah kami terima dan akan kami baca.</p></div>'}
+    catch(x){b.disabled=false;b.textContent='Kirim masukan';alert('Gagal mengirim. Coba lagi atau hubungi kami lewat WhatsApp.')}};
+})();
 // menu dari aplikasi
 const IKON='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v2M14 2v2M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1"/></svg>';
 let MENU=[],kat='Semua';
